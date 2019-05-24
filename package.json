@@ -1,0 +1,75 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A very work in progress personal portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:prod",
+    "build:prod": "cross-env MODE_ENV=production webpack --config ./config/webpack.prod.js",
+    "build:dev": "cross-env MODE_ENV=development webpack --config ./config/webpack.dev.js",
+    "watch": "npm run watch:prod",
+    "watch:prod": "cross-env MODE_ENV=production webpack --config ./config/webpack.prod.js --watch",
+    "watch:dev": "cross-env MODE_ENV=development webpack --config ./config/webpack.dev.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanPeterCole/Portfolio.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/JonathanPeterCole/Portfolio/issues"
+  },
+  "homepage": "https://github.com/JonathanPeterCole/Portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "classnames": "^2.2.6",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^3.0.1",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-arrow-functions",
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
