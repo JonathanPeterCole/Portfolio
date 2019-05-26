@@ -1,0 +1,8 @@
+.app {
+  height: 100%;
+  transition: $theme-transition-duration;
+  @include theme {
+    color: getThemeProperty('textPrimary');
+    background-color: getThemeProperty('background');
+  }
+}

@@ -36,7 +36,7 @@ $themes: (
       @content;
     } @else {
       // For other themes, include the content in a separate style
-      .app.#{$themeName} & {
+      .theme-provider.#{$themeName} & {
         @content;
       }
     }
