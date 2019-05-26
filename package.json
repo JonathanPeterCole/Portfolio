@@ -10,6 +10,7 @@
     "watch": "npm run watch:prod",
     "watch:prod": "cross-env MODE_ENV=production webpack --config ./config/webpack.prod.js --watch",
     "watch:dev": "cross-env MODE_ENV=development webpack --config ./config/webpack.dev.js --watch",
+    "publish": "npm run build:prod && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
