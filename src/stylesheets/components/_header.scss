@@ -1,0 +1,27 @@
+.header {
+  height: 130px;
+  padding: 0 66px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  .logo-container {
+    height: 42px;
+    width: 225px;
+    position: relative;
+    .logo {
+      height: 42px;
+      width: 225px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity $theme-transition-duration;
+      &.show {
+        opacity: 1;
+      }
+    }
+  }
+}
