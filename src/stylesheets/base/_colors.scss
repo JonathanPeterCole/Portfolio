@@ -1,0 +1,49 @@
+/**
+* Theming implementation inspired by this article:
+* https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+*
+* This current implementation uses a global variable to make the theme properties
+* available within the content block of the Mixin. It may be worth looking for a
+* better way to implement this to avoid the use of global variables.
+*/
+
+$themes: (
+  default: (
+    background: #f3f5f9,
+    foreground: #ffffff,
+    textPrimary: #17191e,
+    textSecondary: #8793a0,
+    button: #ffffff,
+    buttonText: #17191e
+  ),
+  dark: (
+    background: #0a0c11,
+    foreground: #17191e,
+    textPrimary: #ffffff,
+    textSecondary: #8793a0,
+    button: #17191e,
+    buttonText: #ffffff
+  )
+);
+
+@mixin theme {
+  // Loop through the themes
+  @each $themeName, $theme in $themes {
+    // Make the theme available globally so it can be accessed by getThemeProperty
+    $theme-map: $theme !global;
+    @if $themeName == 'default' {
+      // For the default theme, include the content within the current style
+      @content;
+    } @else {
+      // For other themes, include the content in a separate style
+      .app.#{$themeName} & {
+        @content;
+      }
+    }
+  }
+}
+
+@function getThemeProperty($key) {
+  // Get the value for the current theme
+  @return map-get($theme-map, $key);
+}
