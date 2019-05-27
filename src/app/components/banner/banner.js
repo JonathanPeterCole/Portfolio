@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 
 import Mesh from '../mesh/mesh'
 
@@ -17,6 +16,7 @@ export default class Banner extends React.Component {
         <div className='layer click-through'>
           Content
         </div>
+        <div className='gradient-fade'/>
       </div>
     )
   }

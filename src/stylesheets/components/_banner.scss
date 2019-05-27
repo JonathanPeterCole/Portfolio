@@ -11,4 +11,17 @@
       pointer-events: none;
     }
   }
+  .gradient-fade {
+    height: 240px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: $theme-transition-duration;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    -webkit-mask-image: -webkit-linear-gradient(to bottom, transparent 0%, black 100%);
+    @include theme {
+      background-color: getThemeProperty('background');
+    }
+  }
 }
