@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   right: 0;
+  pointer-events: none;
   .logo-container {
     height: 42px;
     width: 225px;
@@ -20,6 +21,33 @@
       opacity: 0;
       transition: opacity $theme-transition-duration;
       &.show {
+        opacity: 1;
+      }
+    }
+  }
+  .theme-toggle {
+    height: 42px;
+    width: 42px;
+    border-radius: 100%;
+    background: rgba(135, 147, 160, 0);
+    cursor: pointer;
+    position: relative;
+    transition: background 150ms;
+    overflow: hidden;
+    pointer-events: auto;
+    &:hover {
+      background: rgba(135, 147, 160, 0.2);
+    }
+    .icon {
+      height: 22px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 200ms, transform 200ms cubic-bezier(.25,.46,.45,.94);
+      &.show {
+        transform: translateY(0);
         opacity: 1;
       }
     }
