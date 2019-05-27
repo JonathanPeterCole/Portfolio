@@ -1,20 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransition } from 'react-transition-group'
 
 const BannerPage = props => {
   return (
-    <div className='page'>
-      <div className='container'>
-        <div className='section details'>
-          <div className='title'>{props.title}</div>
-          <div className='description'>{props.description}</div>
-          <a className='action' href={props.link}>{props.actionText}</a>
-        </div>
-        <div className='section image'>
-          <img src={props.image} />
+    <CSSTransition
+          in={props.show}
+          classNames='animation'
+          timeout={{'enter': 6000, 'exit': 500 }}
+          appear>
+      <div className='layer click-through page'>
+        <div className='container'>
+          <div className='section details'>
+            <div className='title'>{props.title}</div>
+            <div className='description'>{props.description}</div>
+            <a className='action' href={props.link}>{props.actionText}</a>
+          </div>
+          <div className='section image'>
+            <img src={props.image} />
+          </div>
         </div>
       </div>
-    </div>
+    </CSSTransition>
+    
   )
 }
 
@@ -23,7 +31,8 @@ BannerPage.protoTypes = {
   description: PropTypes.string,
   action: PropTypes.string,
   link: PropTypes.string,
-  image: PropTypes.image
+  image: PropTypes.image,
+  show: PropTypes.boolean
 }
 
 export default BannerPage

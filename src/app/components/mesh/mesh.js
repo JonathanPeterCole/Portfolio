@@ -39,7 +39,7 @@ export default class Mesh extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    if (prevProps != this.props) {
+    if (prevProps.color != this.props.color) {
         // Clear the new props timer
       clearTimeout(this.newPropsTimer)
       // Hide the canvas
