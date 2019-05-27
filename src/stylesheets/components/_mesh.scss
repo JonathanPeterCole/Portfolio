@@ -1,0 +1,13 @@
+.mesh-canvas-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.mesh-canvas {
+  opacity: 0;
+  transition: opacity 0ms;
+  &.show {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+}

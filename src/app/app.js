@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import Header from './components/header/header'
+import Banner from './components/banner/banner'
 
 export default class App extends React.Component {
   constructor (props) {
@@ -23,7 +24,7 @@ export default class App extends React.Component {
       <div className={classNames('theme-provider', {dark: this.state.darkTheme})}>
         <div className='app'>
           <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
-          <div className='content'>Content</div>
+          <Banner dark={this.state.darkTheme} />
         </div>
       </div>
     )
