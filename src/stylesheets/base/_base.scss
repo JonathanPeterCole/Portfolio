@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
 }
 #container {
   height: 100%;

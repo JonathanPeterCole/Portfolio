@@ -25,6 +25,9 @@ export default class App extends React.Component {
         <div className='app'>
           <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
           <Banner dark={this.state.darkTheme} />
+          <div className='container'>
+            Projects
+          </div>
         </div>
       </div>
     )
