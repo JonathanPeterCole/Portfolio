@@ -1,5 +1,5 @@
 .app {
-  height: 100%;
+  min-height: 100%;
   transition: $theme-transition-duration;
   @include theme {
     color: getThemeProperty('textPrimary');
@@ -8,5 +8,9 @@
   .container {
     max-width: 1170px;
     margin: auto;
+    padding: 0 66px;
+    @include responsive-mobile {
+      padding: 0 38px;
+    }
   }
 }

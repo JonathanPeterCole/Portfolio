@@ -2,6 +2,9 @@
   height: 820px;
   position: relative;
   overflow: hidden;
+  @include responsive-mobile {
+    max-height: 80vh;
+  }
   .layer {
     position: absolute;
     top: 0;
@@ -36,18 +39,29 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      @include responsive-mobile-tablet {
+        flex-direction: column;
+      }
     }
     .section {
-      max-width: 50%;
+      @include responsive-desktop {
+        max-width: 50%;
+      }
     }
     .details {
       display: flex;
       justify-content: center;
       flex-direction: column;
+      @include responsive-mobile-tablet {
+        margin: 110px 0 50px 0;
+      }
       .title {
         font-size: 68px;
         font-weight: 700;
         text-transform: uppercase;
+        @include responsive-mobile {
+          font-size: 62px;
+        }
       }
       .description {
         font-size: 16px;
@@ -79,12 +93,25 @@
     .image {
       display: flex;
       justify-content: flex-end;
-      flex-direction: column;
+      flex-direction: row;
+      @include responsive-desktop {
+        justify-content: flex-end;
+        flex-direction: column;
+      }
       img {
         height: 690px;
         width: 690px;
         margin-bottom: -36px;
         transform: rotate(5deg);
+        @include responsive-tablet {
+          height: 500px;
+          width: 500px;
+        }
+        @include responsive-mobile {
+          height: 300px;
+          width: 300px;
+          margin-right: -68px;
+        }
       }
     }
     &.animation-enter, &.animation-appear {
