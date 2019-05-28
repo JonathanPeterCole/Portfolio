@@ -161,9 +161,9 @@ Mesh.protoTypes = {
 }
 
 Mesh.defaultProps = {
-  density: 40,
+  density: 50,
   minSpeed: 0.2,
-  maxSpeed: 1.5,
+  maxSpeed: 1,
   pointRadius: 3,
   lineRadius: 250,
   lineWidth: 1,
