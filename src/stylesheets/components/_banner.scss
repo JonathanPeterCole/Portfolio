@@ -29,6 +29,41 @@
       background-color: getThemeProperty('background');
     }
   }
+  .page-indicator {
+    height: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    .dot-container {
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      cursor: pointer;
+      opacity: 0.15;
+      transition: opacity 200ms;
+      .dot {
+        height: 9px;
+        width: 9px;
+        margin: 2px;
+        background: #8793a0;
+        border-radius: 100%;
+        transition: background $theme-transition-duration;
+        @include theme {
+          background-color: getThemeProperty('indicator');
+        }
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+      &.show {
+        opacity: 1;
+      }
+    }
+  }
   .page {
     height: 100%;
     display: none;

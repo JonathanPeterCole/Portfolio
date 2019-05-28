@@ -2,6 +2,7 @@ import React from 'react'
 
 import Mesh from '../mesh/mesh'
 import BannerPage from './banner-page'
+import PageIndicator from './page-indicator'
 
 import GitHubLogo from './img/github.svg'
 import LinkedInLogo from './img/linkedin.svg'
@@ -30,7 +31,7 @@ export default class Banner extends React.Component {
       }
     ]
     // Change page every 10 seconds
-    setInterval(this.nextPage, 10000)
+    this.setInterval()
   }
 
   nextPage = () => {
@@ -39,6 +40,16 @@ export default class Banner extends React.Component {
       newPage = 0
     }
     this.setState({currentPage: newPage})
+  }
+
+  setPage = (page) => {
+    this.setInterval()
+    this.setState({currentPage: page})
+  }
+
+  setInterval = () => {
+    clearInterval(this.slideshowInterval)
+    this.slideshowInterval = setInterval(this.nextPage, 10000)
   }
 
   render () {
@@ -59,6 +70,7 @@ export default class Banner extends React.Component {
           )
         })}
         <div className='gradient-fade'/>
+        <PageIndicator count={this.pages.length} currentPage={this.state.currentPage} setPage={this.setPage} />
       </div>
     )
   }
