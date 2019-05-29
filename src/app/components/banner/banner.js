@@ -55,21 +55,23 @@ export default class Banner extends React.Component {
   render () {
     return (
       <div className='banner'>
-        <div className='layer'>
-          <Mesh color={this.props.dark ? '29,35,45' : '224,228,235'} />
+        <div className='layer-container'>
+          <div className='layer'>
+            <Mesh color={this.props.dark ? '29,35,45' : '224,228,235'} />
+          </div>
+          {this.pages.map((page, key) => {
+            return (
+              <BannerPage
+                title={page.title}
+                description={page.description}
+                actionText={page.actionText}
+                link={page.link}
+                image={page.image}
+                show={key === this.state.currentPage} />
+            )
+          })}
+          <div className='gradient-fade'/>
         </div>
-        {this.pages.map((page, key) => {
-          return (
-            <BannerPage
-              title={page.title}
-              description={page.description}
-              actionText={page.actionText}
-              link={page.link}
-              image={page.image}
-              show={key === this.state.currentPage} />
-          )
-        })}
-        <div className='gradient-fade'/>
         <PageIndicator count={this.pages.length} currentPage={this.state.currentPage} setPage={this.setPage} />
       </div>
     )

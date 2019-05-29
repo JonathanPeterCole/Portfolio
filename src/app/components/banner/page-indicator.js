@@ -6,7 +6,7 @@ const PageIndicator = props => {
   let dots = []
   for (let i = 0; i < props.count; i++) {
     dots.push(
-      <div className={classNames('dot-container', {show: i === props.currentPage})} onClick={() => {
+      <div className={classNames('dot-container', {active: i === props.currentPage})} onClick={() => {
         props.setPage(i)
       }}>
         <div className='dot' />

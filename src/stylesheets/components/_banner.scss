@@ -1,9 +1,11 @@
 .banner {
-  height: 820px;
-  position: relative;
-  overflow: hidden;
-  @include responsive-mobile {
-    max-height: 80vh;
+  .layer-container {
+    height: 820px;
+    position: relative;
+    overflow: hidden;
+    @include responsive-mobile {
+      max-height: 80vh;
+    }
   }
   .layer {
     position: absolute;
@@ -21,47 +23,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    transition: $theme-transition-duration;
+    transition: background $theme-transition-duration;
     mask-image: linear-gradient(transparent, black);
     -webkit-mask-image: -webkit-linear-gradient(transparent, black);
     pointer-events: none;
     @include theme {
       background-color: getThemeProperty('background');
     }
-  }
-  .page-indicator {
-    height: 13px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    .dot-container {
-      height: 13px;
-      width: 13px;
-      margin: 0 2px;
-      cursor: pointer;
-      opacity: 0.15;
-      transition: opacity 200ms;
-      .dot {
-        height: 9px;
-        width: 9px;
-        margin: 2px;
-        background: #8793a0;
-        border-radius: 100%;
-        transition: background $theme-transition-duration;
-        @include theme {
-          background-color: getThemeProperty('indicator');
-        }
-      }
-      &:hover {
-        opacity: 0.5;
-      }
-      &.show {
-        opacity: 1;
-      }
+    @include responsive-mobile {
+      height: 100px;
     }
   }
   .page {
@@ -202,6 +172,38 @@
         transform: translateY(150px) rotate(-10deg);
         opacity: 0;
         transition: opacity 500ms, transform 500ms cubic-bezier(.55,.09,.68,.53);
+      }
+    }
+  }
+  .page-indicator {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    .dot-container {
+      height: 15px;
+      width: 15px;
+      cursor: pointer;
+      opacity: 0.15;
+      transition: opacity 200ms;
+      .dot {
+        height: 9px;
+        width: 9px;
+        margin: 2px;
+        background: #8793a0;
+        border-radius: 100%;
+        transition: background $theme-transition-duration;
+        @include theme {
+          background-color: getThemeProperty('indicator');
+        }
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+      &.active {
+        opacity: 1;
       }
     }
   }
