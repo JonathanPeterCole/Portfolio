@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 const ProjectTile = props => {
   return (
-    <a className={classNames('project-tile', {large: props.large})} href={props.link}>
+    <a className={classNames('project-tile', {large: props.large})} href={props.link} target='_blank'>
       <div className='details'>
         <div className='type'>{props.type}</div>
         <div className='title'>{props.title}</div>

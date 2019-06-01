@@ -23,7 +23,8 @@ const Projects = props => {
                   type='Project'
                   title='Tech Support Site'
                   description='A website to advertise tech support services and provide easy email bookings.'
-                  action='Coming Soon' />
+                  action='Source Code >'
+                  link='https://github.com/JonathanPeterCole/Tech-Support-Site' />
               </div>
               <div className='row'>
                 <ProjectTile
