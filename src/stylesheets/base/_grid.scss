@@ -4,6 +4,9 @@
   .row {
     display: flex;
     flex-direction: row;
+    @include responsive-mobile-tablet {
+      flex-direction: column;
+    }
     .column {
       flex-grow: 1;
       flex-basis: 0;
