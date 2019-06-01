@@ -14,7 +14,7 @@ const BannerPage = props => {
           <div className='section details'>
             <div className='title'>{props.title}</div>
             <div className='description'>{props.description}</div>
-            <a className='action' href={props.link}>{props.actionText}</a>
+            <a className='action' href={props.link} target='_blank'>{props.actionText}</a>
           </div>
           <div className='section image'>
             <img src={props.image} />
@@ -22,7 +22,6 @@ const BannerPage = props => {
         </div>
       </div>
     </CSSTransition>
-    
   )
 }
 
