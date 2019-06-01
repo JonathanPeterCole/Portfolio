@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import ProjectTile from './project-tile';
+import ProjectTile from './project-tile'
 
 const Projects = props => {
   return (

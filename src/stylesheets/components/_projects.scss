@@ -13,13 +13,18 @@
     justify-content: space-between;
     box-sizing: border-box;
     border-radius: 8px;
+    will-change: transform;
     transition: background $theme-transition-duration, 
                 box-shadow $theme-transition-duration,
-                color $theme-transition-duration;
+                color $theme-transition-duration,
+                transform 300ms;
     @include theme {
       box-shadow: getThemeProperty('boxShadow');
       color: getThemeProperty('textPrimary');
       background-color: getThemeProperty('foreground');
+    }
+    &:hover {
+      transform: scale(1.015);
     }
     .type {
       font-size: 14px;
