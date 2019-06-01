@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import Header from './components/header/header'
 import Banner from './components/banner/banner'
 import Projects from './components/projects/projects'
+import Footer from './components/footer/footer'
 
 export default class App extends React.Component {
   constructor (props) {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
           <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
           <Banner dark={this.state.darkTheme} />
           <Projects />
+          <Footer dark={this.state.darkTheme} />
         </div>
       </div>
     )
