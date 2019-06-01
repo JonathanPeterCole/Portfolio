@@ -1,0 +1,52 @@
+.projects {
+  padding: 30px 0;
+  .grid {
+    margin: -12px;
+  }
+  .project-tile {
+    height: 238px;
+    margin: 12px;
+    padding: 31px 43px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: background $theme-transition-duration, 
+                box-shadow $theme-transition-duration,
+                color $theme-transition-duration;
+    @include theme {
+      box-shadow: getThemeProperty('boxShadow');
+      color: getThemeProperty('textPrimary');
+      background-color: getThemeProperty('foreground');
+    }
+    .type {
+      font-size: 14px;
+    }
+    .title {
+      margin-top: -2px;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .description {
+      max-width: 62%;
+      font-size: 14px;
+      transition: color $theme-transition-duration;
+      @include theme {
+        color: getThemeProperty('textSecondary');
+      }
+    }
+    .action {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &.large {
+      height: 500px;
+      .description {
+        max-width: 82%;
+      }
+    }
+  }
+}

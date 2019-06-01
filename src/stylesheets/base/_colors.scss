@@ -15,7 +15,8 @@ $themes: (
     textSecondary: #8793a0,
     button: #17191e,
     buttonText: #ffffff,
-    indicator: #8793a0
+    indicator: #8793a0,
+    boxShadow: 0 6px 10px #e1e4eb
   ),
   dark: (
     background: #0a0c11,
@@ -24,7 +25,8 @@ $themes: (
     textSecondary: #8793a0,
     button: #ffffff,
     buttonText: #17191e,
-    indicator: #ffffff
+    indicator: #ffffff,
+    boxShadow: 0 6px 10px #07090d
   )
 );
 
