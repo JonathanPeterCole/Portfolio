@@ -1,5 +1,6 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -38,7 +39,15 @@ module.exports = {
         to: '',
         toType: 'dir'
       }
-    ])
+    ]),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/html/template.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: './src/html/template.html'
+    })
   ],
   target: 'web'
 }
