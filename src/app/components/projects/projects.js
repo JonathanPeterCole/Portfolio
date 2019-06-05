@@ -6,7 +6,7 @@ import ProjectTile from './project-tile'
 const Projects = props => {
   return (
     <div className='projects'>
-      <div className='container'>
+      <div className='container fixed-width'>
         <div className='grid'>
           <div className='row'>
             <div className='column'>
@@ -14,7 +14,8 @@ const Projects = props => {
                 type='Project'
                 title='Clean Air Project'
                 description='My University final year large team project, measuring air and noise pollution across Cardiff using sensors attached to bikes.'
-                action='Coming Soon'
+                action='See More >'
+                link='/clean-air-project'
                 large />
             </div>
             <div className='column'>
@@ -24,7 +25,8 @@ const Projects = props => {
                   title='Tech Support Site'
                   description='A website to advertise tech support services and provide easy email bookings.'
                   action='Source Code >'
-                  link='https://github.com/JonathanPeterCole/Tech-Support-Site' />
+                  link='https://github.com/JonathanPeterCole/Tech-Support-Site'
+                  external />
               </div>
               <div className='row'>
                 <ProjectTile
@@ -32,7 +34,8 @@ const Projects = props => {
                   title='Porfolio'
                   description='See the source code behind this website.'
                   action='Source Code >'
-                  link='https://github.com/JonathanPeterCole/Portfolio' />
+                  link='https://github.com/JonathanPeterCole/Portfolio'
+                  external />
               </div>
             </div>
           </div>

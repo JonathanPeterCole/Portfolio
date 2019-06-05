@@ -10,7 +10,7 @@ const BannerPage = props => {
           timeout={{'enter': 6000, 'exit': 500 }}
           appear>
       <div className='layer click-through page'>
-        <div className='container'>
+        <div className='container fixed-width'>
           <div className='section details'>
             <div className='title'>{props.title}</div>
             <div className='description'>{props.description}</div>

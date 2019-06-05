@@ -1,10 +1,14 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import classNames from 'classnames'
 
 import Header from './components/header/header'
 import Banner from './components/banner/banner'
 import Projects from './components/projects/projects'
 import Footer from './components/footer/footer'
+
+import CleanAirPage from './pages/clean-air/clean-air'
+import DetailsPageManager from './components/details/details-page-manager';
 
 export default class App extends React.Component {
   constructor (props) {
@@ -25,11 +29,16 @@ export default class App extends React.Component {
     return (
       <div className={classNames('theme-provider', {dark: this.state.darkTheme})}>
         <div className='app'>
-          <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
-          <Banner dark={this.state.darkTheme} />
-          <Projects />
-          <Footer dark={this.state.darkTheme} />
+          <div className='container'>
+            <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
+            <Banner dark={this.state.darkTheme} />
+            <Projects />
+            <Footer dark={this.state.darkTheme} />
+          </div>
         </div>
+        <DetailsPageManager>
+          <Route path={`/clean-air-project`} component={CleanAirPage} />
+        </DetailsPageManager>
       </div>
     )
   }
