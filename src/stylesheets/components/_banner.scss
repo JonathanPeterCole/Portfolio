@@ -135,17 +135,17 @@
       display: flex;
       .details {
         .title {
-          transition: opacity 600ms 500ms, transform 1s cubic-bezier(0.1, 0.5, 0.2, 1) 500ms;
+          transition: opacity 600ms 500ms, transform 1s cubic-bezier(0.1, 0.8, 0.2, 1) 500ms;
           transform: translateY(0px) scaleY(1);
           opacity: 1;
         }
         .description {
-          transition: opacity 600ms 600ms, transform 1s cubic-bezier(0.1, 0.5, 0.2, 1) 600ms;
+          transition: opacity 600ms 600ms, transform 1s cubic-bezier(0.1, 0.8, 0.2, 1) 600ms;
           transform: translateY(0px) scaleY(1);
           opacity: 1;
         }
         .action {
-          transition: opacity 600ms 700ms, transform 1s cubic-bezier(0.1, 0.5, 0.2, 1) 700ms;
+          transition: opacity 600ms 700ms, transform 1s cubic-bezier(0.1, 0.8, 0.2, 1) 700ms;
           transform: translateY(0px) scaleY(1);
           opacity: 1;
         }

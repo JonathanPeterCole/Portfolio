@@ -8,7 +8,8 @@ import Projects from './components/projects/projects'
 import Footer from './components/footer/footer'
 
 import CleanAirPage from './pages/clean-air/clean-air'
-import DetailsPageManager from './components/details/details-page-manager';
+import DetailsPageManager from './components/details/details-page-manager'
+import TechSupportPage from './pages/tech-support/tech-support'
 
 export default class App extends React.Component {
   constructor (props) {
@@ -38,6 +39,7 @@ export default class App extends React.Component {
         </div>
         <DetailsPageManager>
           <Route path={`/clean-air-project`} component={CleanAirPage} />
+          <Route path={`/tech-support-site`} component={TechSupportPage} />
         </DetailsPageManager>
       </div>
     )
