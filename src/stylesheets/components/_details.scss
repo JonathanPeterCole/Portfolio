@@ -15,6 +15,39 @@
       color: getThemeProperty('textPrimary');
       background-color: getThemeProperty('background');
     }
+    .close-btn {
+      position: fixed;
+      height: 45px;
+      width: 45px;
+      background: #fff;
+      border-radius: 50%;
+      top: 41px;
+      right: 64px;
+      transition: transform 200ms ease-out;
+      @include theme {
+        background-color: getThemeProperty('foreground');
+        box-shadow: getThemeProperty('boxShadow');
+      }
+      @include responsive-mobile {
+        height: 42px;
+        width: 42px;
+        top: 29px;
+        right: 38px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      .icon {
+        height: 13px;
+        width: 13px;
+        margin: 16px;
+        @include responsive-mobile {
+          height: 12px;
+          width: 12px;
+          margin: 15px;
+        }
+      }
+    }
     .color-bar {
       height: 4px;
     }
@@ -27,13 +60,15 @@
       justify-content: center;
       text-align: center;
       @include responsive-mobile {
-        height: 220px;
+        height: unset;
+        margin-top: 82px;
+        margin-bottom: 18px;
       }
       .title {
         font-weight: 800;
         font-size: 52px;
         @include responsive-mobile {
-          font-size: 38px;
+          font-size: 32px;
         }
       }
       .subheading {
@@ -41,6 +76,9 @@
         max-width: 420px;
         @include theme {
           color: getThemeProperty('textSecondary');
+        }
+        @include responsive-mobile {
+          font-size: 14px;
         }
       }
     }
