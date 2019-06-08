@@ -9,7 +9,7 @@ const DetailsPageManager = props => {
       <CSSTransition
         key={props.location.pathname}
         classNames='animation'
-        timeout={{ enter: 1600, exit: 300 }}
+        timeout={{ enter: 1200, exit: 300 }}
         unmountOnExit>
         <Switch location={props.location}>
           {props.children}
