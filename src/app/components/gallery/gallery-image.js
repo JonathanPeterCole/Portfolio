@@ -20,7 +20,7 @@ export default class GalleryImage extends React.Component {
       loaded: true
     })
     // When the image has finished loading, remove the spinner from the DOM
-    this.setTimeout(() => {
+    setTimeout(() => {
       this.setState({
         showSpinner: false
       })
