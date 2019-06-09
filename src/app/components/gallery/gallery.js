@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import GalleryImage from './gallery-image'
 
@@ -40,7 +41,12 @@ export default class Gallery extends React.Component {
       <div className='gallery'>
         {this.props.images.map((image, key) => {
           return (
-            <GalleryImage key={key} image={image.image} caption={image.caption} show={image.position === this.state.currentSlide} />
+            <GalleryImage
+              key={key}
+              image={image.image}
+              caption={image.caption}
+              accentColor={this.props.accentColor}
+              show={image.position === this.state.currentSlide} />
           )
         })}
         <div className='controls'>
@@ -60,4 +66,9 @@ export default class Gallery extends React.Component {
       </div>
     )
   }
+}
+
+Gallery.protoTypes = {
+  accentColor: PropTypes.string,
+  images: PropTypes.array
 }
