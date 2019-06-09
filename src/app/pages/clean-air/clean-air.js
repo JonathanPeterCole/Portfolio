@@ -20,32 +20,26 @@ export default class CleanAirPage extends React.Component {
         gradient={['#4c9cff', '#3366ff']}>
         <Gallery accentColor='#4c9cff' images={[
           {
-            position: 0,
             image: GalleryImg1,
             caption: 'Final Product - Mobile App'
           },
           {
-            position: 1,
             image: GalleryImg2,
             caption: 'Final Product - Web App'
           },
           {
-            position: 2,
             image: GalleryImg3,
             caption: 'Personal Axure Prototype - Explore Page'
           },
           {
-            position: 3,
             image: GalleryImg4,
             caption: 'Personal Axure Prototype - Profile Page'
           },
           {
-            position: 4,
             image: GalleryImg5,
             caption: 'Personal Axure Prototype - History Page'
           },
           {
-            position: 5,
             image: GalleryImg6,
             caption: 'Personal Axure Prototype - Settings Page'
           }

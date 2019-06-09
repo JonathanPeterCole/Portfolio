@@ -19,22 +19,18 @@ export default class TechSupportPage extends React.Component {
         gradient={['#db2525', '#9e0538']}>
         <Gallery accentColor='#db2525' images={[
           {
-            position: 0,
             image: GalleryImg1,
             caption: 'Homepage'
           },
           {
-            position: 1,
             image: GalleryImg2,
             caption: 'Booking Page - Service Selection'
           },
           {
-            position: 2,
             image: GalleryImg3,
             caption: 'Booking Page - On/Off Site Selection'
           },
           {
-            position: 3,
             image: GalleryImg4,
             caption: 'Booking Page - Booking Form'
           }

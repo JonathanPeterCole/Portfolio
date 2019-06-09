@@ -46,7 +46,7 @@ export default class Gallery extends React.Component {
               image={image.image}
               caption={image.caption}
               accentColor={this.props.accentColor}
-              show={image.position === this.state.currentSlide} />
+              show={key === this.state.currentSlide} />
           )
         })}
         <div className='controls'>
