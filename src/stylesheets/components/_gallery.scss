@@ -1,0 +1,110 @@
+.gallery {
+  height: 0;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-top: 56.25%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  @include theme {
+    box-shadow: getThemeProperty('boxShadow');
+    background-color: getThemeProperty('foreground');
+  }
+  &:hover {
+    .image {
+      .caption-container {
+        transform: translateY(0);
+      }
+    }
+    .controls {
+      opacity: 1;
+    }
+  }
+  .image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img {
+      height: 100%;
+    }
+    .caption-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(100%);
+      pointer-events: none;
+      .caption {
+        height: 30px;
+        margin: 20px;
+        padding: 0 15px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+      }
+    }
+    &.animation-enter, &.animation-appear {
+      display: block;
+      opacity: 0;
+      z-index: 1;
+    }
+    &.animation-enter-active, &.animation-appear-active {
+      transition: opacity 400ms;
+      opacity: 1;
+    }
+    &.animation-enter-done {
+      display: block;
+    }
+    &.animation-exit {
+      display: block;
+      z-index: 0;
+    }
+  }
+  .controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 300ms;
+    pointer-events: none;
+    .arrow {
+      height: 45px;
+      width: 45px;
+      margin: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 200ms ease-out;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      pointer-events: auto;
+      @include theme {
+        background-color: getThemeProperty('foreground');
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      .icon {
+        height: 13px;
+        width: 13px;
+        margin: 16px;
+      }
+    }
+  }
+}

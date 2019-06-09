@@ -62,6 +62,7 @@ export default class Banner extends React.Component {
           {this.pages.map((page, key) => {
             return (
               <BannerPage
+                key={key}
                 title={page.title}
                 description={page.description}
                 actionText={page.actionText}

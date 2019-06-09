@@ -10,7 +10,7 @@
   transition: background 300ms;
   .details-page {
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     @include theme {
       color: getThemeProperty('textPrimary');
       background-color: getThemeProperty('background');
@@ -19,7 +19,6 @@
       position: fixed;
       height: 45px;
       width: 45px;
-      background: #fff;
       border-radius: 50%;
       top: 41px;
       right: 64px;
@@ -62,7 +61,7 @@
       @include responsive-mobile {
         height: unset;
         margin-top: 82px;
-        margin-bottom: 18px;
+        margin-bottom: 28px;
       }
       .title {
         font-weight: 800;

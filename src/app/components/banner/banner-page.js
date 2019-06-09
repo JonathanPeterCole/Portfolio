@@ -31,7 +31,7 @@ BannerPage.protoTypes = {
   action: PropTypes.string,
   link: PropTypes.string,
   image: PropTypes.image,
-  show: PropTypes.boolean
+  show: PropTypes.bool
 }
 
 export default BannerPage
