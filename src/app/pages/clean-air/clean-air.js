@@ -22,32 +22,32 @@ export default class CleanAirPage extends React.Component {
           {
             position: 0,
             image: GalleryImg1,
-            caption: 'Final Product - Explore Page'
+            caption: 'Final Product - Mobile App'
           },
           {
             position: 1,
             image: GalleryImg2,
-            caption: 'Final Product - Profile Page'
+            caption: 'Final Product - Web App'
           },
           {
             position: 2,
             image: GalleryImg3,
-            caption: 'Personal Prototype - Explore Page'
+            caption: 'Personal Axure Prototype - Explore Page'
           },
           {
             position: 3,
             image: GalleryImg4,
-            caption: 'Personal Prototype - Profile Page'
+            caption: 'Personal Axure Prototype - Profile Page'
           },
           {
             position: 4,
             image: GalleryImg5,
-            caption: 'Personal Prototype - History Page'
+            caption: 'Personal Axure Prototype - History Page'
           },
           {
             position: 5,
             image: GalleryImg6,
-            caption: 'Personal Prototype - Settings Page'
+            caption: 'Personal Axure Prototype - Settings Page'
           }
         ]}/>
         <Tags tags={['Express', 'ReactJS', 'SASS', 'Android', 'AWS', 'Terraform']} />
