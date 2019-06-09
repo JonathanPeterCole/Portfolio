@@ -1,0 +1,25 @@
+.action-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  .action-link-container {
+    display: flex;
+    flex-direction: row;
+    margin: -9px;
+    .action-link {
+      height: 40px;
+      width: 140px;
+      margin: 9px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 40px;
+      text-transform: uppercase;
+      @include theme {
+        background-color: getThemeProperty('button');
+        color: getThemeProperty('buttonText');
+      }
+    }
+  }
+}
