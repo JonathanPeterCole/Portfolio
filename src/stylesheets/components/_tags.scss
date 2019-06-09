@@ -5,10 +5,12 @@
   .tag-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: -9px;
     .tag {
-      height: 30px;
-      width: 85px;
+      height: 34px;
+      min-width: 85px;
       margin: 9px;
       border-radius: 17px;
       border: 2px solid rgba(135, 147, 160, 0.5);
@@ -17,6 +19,8 @@
       text-align: center;
       line-height: 30px;
       color: #8793a0;
+      padding: 0 10px;
+      box-sizing: border-box;
     }
   }
 }
