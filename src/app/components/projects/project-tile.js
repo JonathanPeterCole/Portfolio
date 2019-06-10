@@ -18,13 +18,13 @@ const ProjectTile = props => {
   // Handle external links separately from React Router links
   if (props.external) {
     return (
-      <a className={classNames('project-tile', {large: props.large})} href={props.link} target='_blank'>
+      <a className={classNames('project-tile', { large: props.large })} href={props.link} target='_blank'>
         {content}
       </a>
     )
   } else {
     return (
-      <Link className={classNames('project-tile', {large: props.large})} to={props.link}>
+      <Link className={classNames('project-tile', { large: props.large })} to={props.link}>
         {content}
       </Link>
     )

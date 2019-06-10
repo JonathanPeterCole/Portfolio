@@ -14,7 +14,7 @@ const Spinner = props => {
   )
 }
 
-Spinner.protoTypes = {
+Spinner.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string
 }

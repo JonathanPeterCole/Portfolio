@@ -29,8 +29,8 @@ export default class Mesh extends React.Component {
     this.canvasElement.addEventListener('mousemove', event => {
       let canvasBounding = this.canvasElement.getBoundingClientRect()
       this.mousePosition = {
-        x: event.clientX - canvasBounding.left, 
-        y: event.pageY  - canvasBounding.top
+        x: event.clientX - canvasBounding.left,
+        y: event.pageY - canvasBounding.top
       }
     })
     this.canvasContainer.addEventListener('mouseleave', () => {
@@ -38,12 +38,12 @@ export default class Mesh extends React.Component {
     })
   }
 
-  componentDidUpdate (prevProps) {
-    if (prevProps.color != this.props.color) {
-        // Clear the new props timer
+  componentWillUpdate (prevProps) {
+    if (prevProps.color !== this.props.color) {
+      // Clear the new props timer
       clearTimeout(this.newPropsTimer)
       // Hide the canvas
-      this.setState({show: false})
+      this.setState({ show: false })
       // Wait for fade animation to be finished
       this.newPropsTimer = setTimeout(this.initialiseMesh, 200)
     }
@@ -58,21 +58,21 @@ export default class Mesh extends React.Component {
     // Create the points
     this.createPoints()
     // Show the canvas
-    this.setState({show: true})
+    this.setState({ show: true })
   }
 
   resize = () => {
     // Clear resize timer
     clearTimeout(this.resizeTimer)
     // Hide the canvas
-    this.setState({show: false})
+    this.setState({ show: false })
     // Wait for fade animation to be finished
     this.resizeTimer = setTimeout(this.initialiseMesh, 400)
   }
-  
+
   loop = () => {
     // Clear the canvas
-    this.canvas.clearRect(0,0,this.canvasSize.x,this.canvasSize.y);
+    this.canvas.clearRect(0, 0, this.canvasSize.x, this.canvasSize.y)
     // Update and draw the points
     for (let point of this.points) {
       point.update()
@@ -109,13 +109,12 @@ export default class Mesh extends React.Component {
       if (this.mouseActive) {
         this.compareDistances(this.points[pointA].position, this.mousePosition)
       }
-      
     }
   }
 
   compareDistances = (pointAPosition, pointBPosition) => {
     let distance = Math.sqrt(
-      Math.pow(pointAPosition.x - pointBPosition.x, 2) + 
+      Math.pow(pointAPosition.x - pointBPosition.x, 2) +
       Math.pow(pointAPosition.y - pointBPosition.y, 2)
     )
     if (distance < this.props.lineRadius) {
@@ -143,7 +142,7 @@ export default class Mesh extends React.Component {
   }
 }
 
-Mesh.protoTypes = {
+Mesh.propTypes = {
   // The number of points per 1000px squared
   density: PropTypes.number,
   // The size of the points

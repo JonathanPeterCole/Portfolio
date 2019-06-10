@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Mesh from '../mesh/mesh'
 import BannerPage from './banner-page'
@@ -49,12 +50,12 @@ export default class Banner extends React.Component {
     if (newPage > this.pages.length - 1) {
       newPage = 0
     }
-    this.setState({currentPage: newPage})
+    this.setState({ currentPage: newPage })
   }
 
   setPage = (page) => {
     this.setInterval()
-    this.setState({currentPage: page})
+    this.setState({ currentPage: page })
   }
 
   setInterval = () => {
@@ -82,10 +83,14 @@ export default class Banner extends React.Component {
                 external={page.external} />
             )
           })}
-          <div className='gradient-fade'/>
+          <div className='gradient-fade' />
         </div>
         <PageIndicator count={this.pages.length} currentPage={this.state.currentPage} setPage={this.setPage} />
       </div>
     )
   }
+}
+
+Banner.propTypes = {
+  dark: PropTypes.bool
 }

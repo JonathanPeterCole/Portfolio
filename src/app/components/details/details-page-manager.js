@@ -20,7 +20,6 @@ const DetailsPageManager = props => {
 }
 
 DetailsPageManager.propTypes = {
-  match: PropTypes.object,
   location: PropTypes.object,
   children: PropTypes.node
 }

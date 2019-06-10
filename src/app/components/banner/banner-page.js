@@ -16,10 +16,10 @@ const BannerPage = props => {
   }
   return (
     <CSSTransition
-          in={props.show}
-          classNames='animation'
-          timeout={{'enter': 6000, 'exit': 500 }}
-          appear>
+      in={props.show}
+      classNames='animation'
+      timeout={{ 'enter': 6000, 'exit': 500 }}
+      appear>
       <div className='layer click-through page'>
         <div className='container fixed-width'>
           <div className='section details'>
@@ -36,10 +36,10 @@ const BannerPage = props => {
   )
 }
 
-BannerPage.protoTypes = {
+BannerPage.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  action: PropTypes.string,
+  actionText: PropTypes.string,
   link: PropTypes.string,
   image: PropTypes.image,
   show: PropTypes.bool,

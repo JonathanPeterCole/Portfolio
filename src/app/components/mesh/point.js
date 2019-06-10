@@ -36,7 +36,7 @@ export default class Point {
   }
   draw = (canvas, color) => {
     canvas.beginPath()
-    canvas.arc(this.position.x, this.position.y, this.radius, 0, Math.PI*2)
+    canvas.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2)
     canvas.closePath()
     canvas.fillStyle = `rgb(${color})`
     canvas.fill()

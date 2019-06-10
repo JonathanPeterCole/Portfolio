@@ -13,7 +13,7 @@ const ActionLinks = props => {
   )
 }
 
-ActionLinks.protoTypes = {
+ActionLinks.propTypes = {
   links: PropTypes.array
 }
 

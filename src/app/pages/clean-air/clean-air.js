@@ -14,7 +14,7 @@ import GalleryImg6 from './gallery/clean-air-6.jpg'
 export default class CleanAirPage extends React.Component {
   render () {
     return (
-      <DetailsPage 
+      <DetailsPage
         title='Clean Air Project'
         subheading='My University final year large team project, measuring air and noise pollution across Cardiff using sensors attached to bikes.'
         gradient={['#4c9cff', '#3366ff']}>
@@ -43,7 +43,7 @@ export default class CleanAirPage extends React.Component {
             image: GalleryImg6,
             caption: 'Personal Axure Prototype - Settings Page'
           }
-        ]}/>
+        ]} />
         <Tags tags={['Express', 'ReactJS', 'SASS', 'Android', 'AWS', 'Terraform']} />
       </DetailsPage>
     )

@@ -32,13 +32,13 @@ export default class GalleryImage extends React.Component {
       <CSSTransition
         in={this.props.show}
         classNames='animation'
-        timeout={{'enter': 400, 'exit': 400 }}
+        timeout={{ 'enter': 400, 'exit': 400 }}
         appear>
         <div className='image'>
           { this.state.showSpinner &&
             <Spinner className='loader' color={this.props.accentColor} />
           }
-          <img className={classNames({loaded: this.state.loaded})} src={this.props.image} onLoad={this.imageLoaded} />
+          <img className={classNames({ loaded: this.state.loaded })} src={this.props.image} onLoad={this.imageLoaded} />
           <div className='caption-container'>
             <div className='caption'>
               {this.props.caption}
@@ -50,7 +50,7 @@ export default class GalleryImage extends React.Component {
   }
 }
 
-GalleryImage.protoTypes = {
+GalleryImage.propTypes = {
   show: PropTypes.bool,
   image: PropTypes.string,
   caption: PropTypes.string,

@@ -9,8 +9,8 @@ const Footer = props => {
   return (
     <footer className='footer'>
       <div className='logo-container'>
-        <img className={classNames('logo', {show: !props.dark})} src={logoLight} />
-        <img className={classNames('logo', {show: props.dark})} src={logoDark} />
+        <img className={classNames('logo', { show: !props.dark })} src={logoLight} />
+        <img className={classNames('logo', { show: props.dark })} src={logoDark} />
       </div>
       <div className='link-container'>
         <a href='https://github.com/JonathanPeterCole/' target='_blank'>GitHub</a>
@@ -18,6 +18,10 @@ const Footer = props => {
       </div>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  dark: PropTypes.bool
 }
 
 export default Footer

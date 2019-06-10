@@ -28,7 +28,7 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <div className={classNames('theme-provider', {dark: this.state.darkTheme})}>
+      <div className={classNames('theme-provider', { dark: this.state.darkTheme })}>
         <div className='app'>
           <div className='container'>
             <Header dark={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />

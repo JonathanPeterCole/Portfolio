@@ -13,7 +13,7 @@ const Tags = props => {
   )
 }
 
-Tags.protoTypes = {
+Tags.propTypes = {
   tags: PropTypes.array
 }
 

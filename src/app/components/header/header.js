@@ -11,15 +11,20 @@ const Header = props => {
   return (
     <header className='header'>
       <div className='logo-container'>
-        <img className={classNames('logo', {show: !props.dark})} src={logoLight} />
-        <img className={classNames('logo', {show: props.dark})} src={logoDark} />
+        <img className={classNames('logo', { show: !props.dark })} src={logoLight} />
+        <img className={classNames('logo', { show: props.dark })} src={logoDark} />
       </div>
       <a className='theme-toggle' onClick={props.toggleDarkTheme}>
-        <img className={classNames('icon', {show: !props.dark})} src={lightIcon} />
-        <img className={classNames('icon', {show: props.dark})} src={darkIcon} />
+        <img className={classNames('icon', { show: !props.dark })} src={lightIcon} />
+        <img className={classNames('icon', { show: props.dark })} src={darkIcon} />
       </a>
     </header>
   )
+}
+
+Header.propTypes = {
+  dark: PropTypes.bool,
+  toggleDarkTheme: PropTypes.func
 }
 
 export default Header

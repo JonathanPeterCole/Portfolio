@@ -13,7 +13,7 @@ import GalleryImg4 from './gallery/tech-support-site-4.jpg'
 export default class TechSupportPage extends React.Component {
   render () {
     return (
-      <DetailsPage 
+      <DetailsPage
         title='Tech Support Site'
         subheading='A website to advertise tech support services and provide easy email bookings.'
         gradient={['#db2525', '#9e0538']}>
@@ -34,7 +34,7 @@ export default class TechSupportPage extends React.Component {
             image: GalleryImg4,
             caption: 'Booking Page - Booking Form'
           }
-        ]}/>
+        ]} />
         <Tags tags={['Flask', 'JQuery', 'CSS', 'Digital Ocean']} />
         <ActionLinks links={[
           {
