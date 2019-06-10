@@ -6,6 +6,7 @@ import PageIndicator from './page-indicator'
 
 import GitHubLogo from './img/github.svg'
 import LinkedInLogo from './img/linkedin.svg'
+import CleanAirLogo from './img/clean-air.svg'
 
 export default class Banner extends React.Component {
   constructor (props) {
@@ -16,18 +17,27 @@ export default class Banner extends React.Component {
     // Prepare the page data
     this.pages = [
       {
-        'title': 'GitHub',
-        'description': 'Check out some of my past work on GitHub.',
-        'actionText': 'Explore',
-        'link': 'https://github.com/JonathanPeterCole/',
-        'image': GitHubLogo
+        title: 'GitHub',
+        description: 'Check out some of my past work on GitHub.',
+        actionText: 'Explore',
+        link: 'https://github.com/JonathanPeterCole/',
+        image: GitHubLogo,
+        external
       },
       {
-        'title': 'LinkedIn',
-        'description': 'See my skills and experience on LinkedIn.',
-        'actionText': 'Explore',
-        'link': 'https://www.linkedin.com/in/jonathan-cole/',
-        'image': LinkedInLogo
+        title: 'LinkedIn',
+        description: 'See my skills and experience on LinkedIn.',
+        actionText: 'Explore',
+        link: 'https://www.linkedin.com/in/jonathan-cole/',
+        image: LinkedInLogo,
+        external
+      },
+      {
+        title: 'Clean Air',
+        description: 'See my University final year large team project.',
+        actionText: 'See More',
+        link: '/clean-air-project',
+        image: CleanAirLogo
       }
     ]
     // Change page every 10 seconds
@@ -68,7 +78,8 @@ export default class Banner extends React.Component {
                 actionText={page.actionText}
                 link={page.link}
                 image={page.image}
-                show={key === this.state.currentPage} />
+                show={key === this.state.currentPage}
+                external={page.external} />
             )
           })}
           <div className='gradient-fade'/>
