@@ -57,3 +57,7 @@ The following NPM scripts are included in the project. For the commands that bui
 * **Publish**  
   Automatically builds and deploys to GitHub Pages.  
   `npm run publish`  
+
+* **Lint**  
+  Runs ESLint - Use `:fix` to automatically fix some linting errors.  
+  `npm run lint`  
