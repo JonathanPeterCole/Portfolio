@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/JonathanPeterCole/Portfolio#readme",
   "dependencies": {
-    "http-server": "^0.9.0"
+    "http-server": "^14.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
